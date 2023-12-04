@@ -78,7 +78,8 @@ export function solve(input: string): Result {
 
 // Learn more at https://deno.land/manual/examples/module_metadata#concepts
 if (import.meta.main) {
-  const data = fs.readFileSync("data.yml").toString()
+  const path = new URL("data.yml", import.meta.url).pathname
+  const data = fs.readFileSync(path).toString()
   const input = YAML.parse(data).puzzle.input
   const result = solve(input)
   console.log(result)

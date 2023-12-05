@@ -3,7 +3,8 @@ import yaml
 from solve import solve
 
 if __name__ == '__main__':
-  with open('data.yml') as f:
+  # read the data.yml file from the directory relative to this file
+  with open(__file__.replace('test.py', 'data.yml')) as f:
     data = yaml.safe_load(f)
   # iterate over the test cases
   for test in data['tests']:

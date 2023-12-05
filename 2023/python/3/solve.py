@@ -85,8 +85,9 @@ def solve(data):
   }
 
 if __name__ == '__main__':
-  # read the yaml input file
-  with open('data.yml') as f:
+  # read the data.yml file from the directory relative to this file
+  with open(__file__.replace('test.py', 'data.yml')) as f:
+    data = yaml.safe_load(f)
     data = yaml.safe_load(f)
   # print the solution
   print(solve(data['puzzle']['input']))

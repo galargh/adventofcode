@@ -1,0 +1,11 @@
+tests:
+  - input:
+      time: [7, 15, 30]
+      distance: [9, 40, 200]
+    output:
+      mini: 288
+      mega: 71503
+puzzle:
+  input:
+    time: [48, 93, 85, 95]
+    distance: [296, 1928, 1236, 1391]

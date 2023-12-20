@@ -1,0 +1,217 @@
+tests:
+  - input:
+      stop: 1000
+      modules:
+        broadcaster:
+          type: broadcast
+          destination: [a, b, c]
+        a:
+          type: flip-flop
+          destination: [b]
+        b:
+          type: flip-flop
+          destination: [c]
+        c:
+          type: flip-flop
+          destination: [inv]
+        inv:
+          type: conjunction
+          destination: [a]
+    output: 32000000
+  - input:
+      stop: 1000
+      modules:
+        broadcaster:
+          type: broadcast
+          destination: [a]
+        a:
+          type: flip-flop
+          destination: [inv, con]
+        inv:
+          type: conjunction
+          destination: [b]
+        b:
+          type: flip-flop
+          destination: [con]
+        con:
+          type: conjunction
+          destination: [output]
+    output: 11687500
+puzzle:
+  input:
+    stop: [jx, tt, qz, cq]
+    modules:
+      cg:
+        type: flip-flop
+        destination: [mt, hb]
+      sp:
+        type: flip-flop
+        destination: [xm]
+      nr:
+        type: flip-flop
+        destination: [hf, mt]
+      broadcaster:
+        type: broadcast
+        destination: [tl, gd, zb, gc]
+      qz:
+        type: conjunction
+        destination: [qn]
+      df:
+        type: flip-flop
+        destination: [hd]
+      vg:
+        type: flip-flop
+        destination: [rm, kx]
+      gm:
+        type: flip-flop
+        destination: [mt, md]
+      ls:
+        type: flip-flop
+        destination: [hc]
+      lq:
+        type: flip-flop
+        destination: [zq, fx]
+      zd:
+        type: conjunction
+        destination: [bz, kg, zb, lf, sq, zk, jx]
+      lz:
+        type: flip-flop
+        destination: [mt]
+      sq:
+        type: flip-flop
+        destination: [zk]
+      zn:
+        type: flip-flop
+        destination: [kx, tc]
+      zq:
+        type: conjunction
+        destination: [mb, hc, qz, ql, tl, ls]
+      mt:
+        type: conjunction
+        destination: [zm, tt, mh, gd, md]
+      lm:
+        type: flip-flop
+        destination: [mb, zq]
+      hf:
+        type: flip-flop
+        destination: [mt, sm]
+      hb:
+        type: flip-flop
+        destination: [mh, mt]
+      rm:
+        type: flip-flop
+        destination: [kx]
+      gc:
+        type: flip-flop
+        destination: [kx, sp]
+      cq:
+        type: conjunction
+        destination: [qn]
+      mh:
+        type: flip-flop
+        destination: [jt]
+      zm:
+        type: flip-flop
+        destination: [nr]
+      xm:
+        type: flip-flop
+        destination: [kx, ld]
+      jx:
+        type: conjunction
+        destination: [qn]
+      qn:
+        type: conjunction
+        destination: [rx]
+      mp:
+        type: flip-flop
+        destination: [qt, kx]
+      zk:
+        type: flip-flop
+        destination: [vj]
+      hd:
+        type: flip-flop
+        destination: [mp, kx]
+      tl:
+        type: flip-flop
+        destination: [zq, hl]
+      zb:
+        type: flip-flop
+        destination: [zd, ph]
+      cl:
+        type: flip-flop
+        destination: [zd]
+      tt:
+        type: conjunction
+        destination: [qn]
+      ld:
+        type: flip-flop
+        destination: [zn]
+      js:
+        type: flip-flop
+        destination: [lq, zq]
+      sm:
+        type: flip-flop
+        destination: [mt, lz]
+      qt:
+        type: flip-flop
+        destination: [vg, kx]
+      md:
+        type: flip-flop
+        destination: [cg]
+      vj:
+        type: flip-flop
+        destination: [bz, zd]
+      qs:
+        type: flip-flop
+        destination: [zd, fs]
+      mb:
+        type: flip-flop
+        destination: [ps]
+      kx:
+        type: conjunction
+        destination: [cq, gc, sp, df, ld]
+      hc:
+        type: flip-flop
+        destination: [lm]
+      tc:
+        type: flip-flop
+        destination: [df, kx]
+      ps:
+        type: flip-flop
+        destination: [js, zq]
+      fs:
+        type: flip-flop
+        destination: [qc, zd]
+      hl:
+        type: flip-flop
+        destination: [jj, zq]
+      bz:
+        type: flip-flop
+        destination: [qs]
+      jj:
+        type: flip-flop
+        destination: [zq, ql]
+      ql:
+        type: flip-flop
+        destination: [ls]
+      ph:
+        type: flip-flop
+        destination: [kg, zd]
+      qc:
+        type: flip-flop
+        destination: [cl, zd]
+      lf:
+        type: flip-flop
+        destination: [sq]
+      kg:
+        type: flip-flop
+        destination: [lf]
+      fx:
+        type: flip-flop
+        destination: [zq]
+      jt:
+        type: flip-flop
+        destination: [zm, mt]
+      gd:
+        type: flip-flop
+        destination: [gm, mt]
